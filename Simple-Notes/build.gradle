@@ -25,6 +25,8 @@ android {
 
 }
 
+// github: https://github.com/SimpleMobileTools/Simple-Notes.git
+// commit id: a2bb922
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':Simple-Commons')

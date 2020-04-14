@@ -1,7 +1,8 @@
-package com.github.simple.notes
+package com.github.simple.notes.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.simple.notes.R
 
 class MainActivity : AppCompatActivity() {
 
