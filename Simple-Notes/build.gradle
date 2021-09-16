@@ -3,13 +3,13 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         applicationId "com.github.simple.notes"
-        minSdkVersion 15
-        targetSdkVersion 29
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -23,6 +23,9 @@ android {
         }
     }
 
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 // github: https://github.com/SimpleMobileTools/Simple-Notes.git
@@ -32,10 +35,11 @@ dependencies {
     implementation project(':Simple-Commons')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "androidx.appcompat:appcompat:$androidXAppCompatVersion"
+    implementation "androidx.core:core-ktx:$androidXKTX"
+    implementation "androidx.constraintlayout:constraintlayout:$androidXConstraintlayoutVersion"
+
+    testImplementation "junit:junit:$testJunitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidXTestJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidXEspressoVersion"
 }
