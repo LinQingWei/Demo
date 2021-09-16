@@ -14,4 +14,8 @@
     <color name="md_grey_700">#616161</color>
     <color name="md_grey_800">#424242</color>
     <color name="md_grey_black">#000000</color>
+
+    <color name="md_orange_700">#F57C00</color>
+
+    <color name="md_red_700">#D32F2F</color>
 </resources>
