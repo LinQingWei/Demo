@@ -23,8 +23,6 @@ android {
 
 }
 
-// github: https://github.com/SimpleMobileTools/Simple-Commons.git
-// commit id: 8ccb0e2
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
