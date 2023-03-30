@@ -19,12 +19,12 @@ android {
         }
     }
 
-    compileSdkVersion 33
+    compileSdkVersion propCompileSdkVersion
 
     defaultConfig {
         applicationId "com.github.demo"
-        minSdkVersion 15
-        targetSdkVersion 33
+        minSdkVersion propMinSdkVersion
+        targetSdkVersion propTargetSdkVersion
         versionCode 1
         versionName "1.0"
 

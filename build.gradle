@@ -3,6 +3,9 @@
 buildscript {
 
     ext {
+        propCompileSdkVersion = 33
+        propMinSdkVersion = 23
+        propTargetSdkVersion = propCompileSdkVersion
         kotlin_version = '1.7.20'
     }
 
