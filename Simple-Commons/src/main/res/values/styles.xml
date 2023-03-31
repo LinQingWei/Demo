@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- remove the shadow under actionBar, keep it there around Overflow menu that appears at pressing the 3 dots -->
+    <style name="AppTheme.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.TitleTextStyle">
+        <item name="android:textSize">@dimen/actionbar_text_size</item>
+    </style>
+</resources>
