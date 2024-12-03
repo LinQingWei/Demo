@@ -1,4 +1,0 @@
-rootProject.name='Demo'
-include ':app'
-include ':Simple-Commons'
-include ':Simple-Notes'

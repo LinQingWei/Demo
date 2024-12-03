@@ -1,14 +1,19 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-buildscript {
-
-    ext {
-        propCompileSdkVersion = 33
-        propMinSdkVersion = 23
-        propTargetSdkVersion = propCompileSdkVersion
-        kotlin_version = '1.7.20'
+pluginManagement {
+    repositories {
+        // 改为阿里云的镜像地址
+        maven { setUrl("https://maven.aliyun.com/repository/central") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+        maven { setUrl("https://jitpack.io") }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
     }
-
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         // 改为阿里云的镜像地址
         maven { setUrl("https://maven.aliyun.com/repository/central") }
@@ -20,32 +25,9 @@ buildscript {
         google()
         mavenCentral()
     }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
 }
 
-allprojects {
-    repositories {
-        // 改为阿里云的镜像地址
-        maven { setUrl("https://maven.aliyun.com/repository/central") }
-        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
-        maven { setUrl("https://maven.aliyun.com/repository/google") }
-        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
-        maven { setUrl("https://maven.aliyun.com/repository/public") }
-        maven { setUrl("https://jitpack.io") }
-        google()
-        mavenCentral()
-
-    }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+rootProject.name = "Demo"
+include(":app")
+include(":Simple-Commons")
+include(":Simple-Notes")

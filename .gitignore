@@ -19,6 +19,6 @@
 /gen/
 /proguard/
 /release/
-gradle/
+gradle/wrapper
 gradlew*
 keystore.properties
